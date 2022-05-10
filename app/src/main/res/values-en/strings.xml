@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BankaChallenge</string>
+    <string name="menuBaslik">xBank Branches</string>
+    <string name="hataMesaji">Error! Pls Try Again…</string>
+    <string name="detayBaslik">Branch Detail</string>
+    <string name="toastMesaji">Check Your Internet Connection!</string>
+    <string name="veriBulunamadi">Data not found!</string>
+
+    <string name="sehir">-City: </string>
+    <string name="ilce">-District: </string>
+    <string name="bTipi">-B.Type: </string>
+    <string name="bKodu">-B.Code: </string>
+    <string name="pkodu">-P.Code: </string>
+    <string name="bKoor">-B.Coordinator: </string>
+    <string name="line">-Line State: </string>
+    <string name="site">-Site State: </string>
+    <string name="adresAdi">Address Name: </string>
+    <string name="adres">-Address: </string>
+    <string name="enYakinATM">-Nearest ATM: </string>
+</resources>

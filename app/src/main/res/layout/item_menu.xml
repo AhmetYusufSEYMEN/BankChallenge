@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="model"
+            type="com.seymen.bankachallenge.model.SubeBilgileriModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@color/accent"
+            android:id="@+id/cwRecycler"
+            android:layout_width="match_parent"
+            android:clipToPadding="true"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/textviewRecycler"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                tools:text="CEYHAN ADANA"
+                android:text='@{model.bankaSube.equals("") ? @string/veriBulunamadi : model.bankaSube}'
+                android:fontFamily="@font/exo_medium" />
+
+            <ImageView
+                android:id="@+id/btnGo"
+                android:layout_width="wrap_content"
+                android:scaleType="fitCenter"
+                android:layout_height="24dp"
+                android:textAllCaps="false"
+                app:tint="@color/white"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/rightarrow"
+                android:layout_gravity="center_vertical|end"
+
+                />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

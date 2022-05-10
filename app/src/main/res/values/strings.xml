@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BankaChallenge</string>
+    <string name="menuBaslik">xBank Şubeler</string>
+    <string name="hataMesaji">Hata! Lütfen Tekrar Deneyiniz…</string>
+    <string name="detayBaslik">Şube Detayı</string>
+    <string name="toastMesaji">İnternet Bağlantınızı Kontrol Ediniz!</string>
+    <string name="veriBulunamadi">Veri Bulunamadı!</string>
+
+    <string name="sehir">-Şehir:</string>
+    <string name="ilce">-İlçe:</string>
+    <string name="bTipi">-B.Tipi:</string>
+    <string name="bKodu">-B.Kodu:</string>
+    <string name="pkodu">-Posta Kodu:</string>
+    <string name="bKoor">-B.Koordinatörlüğü:</string>
+    <string name="line">-Line Durumu:</string>
+    <string name="site">-Site Durumu:</string>
+    <string name="adresAdi">Adres Adı:</string>
+    <string name="adres">-Adres:</string>
+    <string name="enYakinATM">-En Yakın ATM:</string>
+
+</resources>
+
+

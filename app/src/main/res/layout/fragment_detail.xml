@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="secilenSube"
+            type="com.seymen.bankachallenge.model.SubeBilgileriModel" />
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MenuFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/geriBtn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/leftarrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/exo_medium"
+            android:text="@string/detayBaslik"
+            android:textColor="@color/text"
+            android:textSize="26sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:background="@color/text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="16dp"
+        android:id="@+id/cardView2"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/primary"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="30dp"
+        >
+
+
+        <TextView
+            android:id="@+id/twIDandBankaSube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:elevation="20dp"
+            android:fontFamily="@font/exo_medium"
+            tools:text="TextView"
+            android:textColor="@color/white"
+            android:text='@{`ID:` + secilenSube.ID+", "+secilenSube.bankaSube}'
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/cardView3"
+        android:layout_width="365dp"
+        android:layout_height="350dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/light_primary"
+        app:cardCornerRadius="30dp"
+        >
+        <TableLayout
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="2dp"
+            android:stretchColumns="0,1">
+
+            <TableRow
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/twSehir"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:text='@{@string/sehir.concat(" ").concat(secilenSube.bankaSehir.equals("") ? @string/veriBulunamadi : secilenSube.bankaSehir) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twSehir"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/twIlce"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text='@{@string/ilce.concat(" ").concat(secilenSube.bankaIlce.equals("") ? @string/veriBulunamadi : secilenSube.bankaIlce) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twIlce"
+
+                    android:textColor="@color/text" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/twBTip"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:text='@{@string/bTipi.concat(" ").concat(secilenSube.bankaTipi.equals("") ? @string/veriBulunamadi : secilenSube.bankaTipi) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBTip"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/twBKodu"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text='@{@string/bKodu.concat(" ").concat(secilenSube.bankaKodu.equals("") ? @string/veriBulunamadi : secilenSube.bankaKodu) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBKodu"
+                    android:textColor="@color/text" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/twBPostaKodu"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:text='@{@string/pkodu.concat(" ").concat(secilenSube.bankaPostaKodu.equals("") ? @string/veriBulunamadi : secilenSube.bankaPostaKodu) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBPostaKodu"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/twBBKoordinatorlugu"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text='@{@string/bKoor.concat(" ").concat(secilenSube.bankaKoord.equals("") ? @string/veriBulunamadi : secilenSube.bankaKoord) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBBKoordinatorlugu"
+                    android:textColor="@color/text" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/twBOnOffline"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:text='@{@string/line.concat(" ").concat(secilenSube.bankaLine.equals("") ? @string/veriBulunamadi : secilenSube.bankaLine) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBOnOffline"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/twBOnOffSite"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text='@{@string/site.concat(" ").concat(secilenSube.bankaSite.equals("") ? @string/veriBulunamadi : secilenSube.bankaSite) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBOnOffSite"
+                    android:textColor="@color/text" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/twBAdresAdi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:text='@{@string/adresAdi.concat(" ").concat(secilenSube.bankaAdresAdi.equals("") ? @string/veriBulunamadi : secilenSube.bankaAdresAdi) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBAdresAdi"
+                    android:textColor="@color/text" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/twBEnYakinATM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:text='@{@string/enYakinATM.concat(" ").concat(secilenSube.bankaEnYakinATM.equals("") ? @string/veriBulunamadi : secilenSube.bankaEnYakinATM) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBEnYakinATM"
+                    android:textColor="@color/text" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/twBAdres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:text='@{@string/adres.concat(" ").concat(secilenSube.bankaAdres.equals("") ? @string/veriBulunamadi : secilenSube.bankaAdres) }'
+                    android:fontFamily="@font/exo_medium"
+                    tools:text="twBAdres"
+                    android:textColor="@color/text" />
+
+            </TableRow>
+
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</layout>
